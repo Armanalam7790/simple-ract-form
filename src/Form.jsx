@@ -20,18 +20,18 @@ const Form = () => {
   return (
     <div>
         <form onSubmit={handleSubmit(sabmithanler)} 
-         className=' flex gap-1  justify-center bg-neutral-600 text-white'>
-            <input
+         className=' flex gap-1 font-sans  justify-center bg-neutral-600 text-white'>
+            <input required
             {...register('name')}
             className=' border-b-green-700 outline-0 p-2 '
             type="text" placeholder='Enter Name' />
                 
-                 <input
+                 <input required
             {...register('number')}
             className=' border-b-green-700 p-3 outline-0 '
             type="Number" placeholder='Enter Number' />
 
-             <input
+             <input required
              {...register("email")}
             className=' border-b-green-700 p-3 outline-0 '
             type="email" placeholder='email' />
@@ -47,7 +47,7 @@ const Form = () => {
               user.map((elem, idx) => (
                 <div
                   key={idx}
-                  className="bg-pink-600 p-4 rounded-md w-fit"
+                  className="bg-pink-600 p-8 rounded-md w-fit"
                 >
                   <h1 className="ri-user-line text-lg font-semibold"> {elem.name}</h1>
                   <p className=" ri-mail-line text-sm"> {elem.email}</p>
